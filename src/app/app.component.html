@@ -1,0 +1,67 @@
+<div id="user-tweets" class="search">
+  <span class="search-field">
+    <span>
+      <input type="text" name="fname" placeholder="Username" (keyup)=onNameKeyUp($event)>
+    </span>
+    <span>
+     <input type="text" name="fname" placeholder="Count" (keyup)=onNumNameKeyUp($event)>
+    </span>
+    <span>
+      <button (click)="getTweetsUser()">Submit</button>
+    </span>
+  </span>
+  <span *ngIf="userFound" class="tweets">
+    <div class="tweets">
+    <div class="profile">
+      <img src="{{userTweets[0].user.profile_image_url}}">
+      <span class="description">
+        <h4>{{userTweets[0].user.screen_name}} ({{userTweets[0].user.name}})</h4>
+        <p>{{userTweets[0].user.description}}</p>
+      </span>
+    </div>
+    <span class="tweets">
+      <div *ngFor="let tweet of userTweets; let i = index" class="twitter-tweet tw-align-center" lang="en">
+        <div>
+          <p>{{tweet.text}}</p>
+          &mdash; {{tweet.user.screen_name}} (@{{tweet.user.name}}) 
+          <a href="https://twitter.com/{{tweet.user.screen_name}}/statuses/{{tweet.id_str}}">{{tweet.user.created_at | date:'short'}}</a>
+        </div>
+      </div>
+    </span>
+    </div>
+  </span>
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <span *ngIf="userError">
+    <span>Please type a valid handle.</span>
+  </span>
+</div>
+
+
+<div id="hashtag-tweets" class="search">
+  <span class="search-field">
+    <span>
+      <input type="text" name="fname" placeholder="Username" (keyup)=onTagKeyUp($event)>
+    </span>
+    <span>
+      <input type="text" name="fname" placeholder="Count" (keyup)=onNumTagKeyUp($event)>
+    </span>
+    <span>
+      <button (click)=getTagTweets()>Submit</button>
+    </span>
+  </span>
+  <span *ngIf="tagFound" class="tweets">
+    <div class="tweets">
+      <div *ngFor="let tweet of tagTweets; let i = index" class="twitter-tweet tw-align-center" lang="en">
+        <div>
+          <p>{{tweet.text}}</p>
+          &mdash; 
+          <a href="https://twitter.com/{{tweet.user.screen_name}}">{{tweet.user.screen_name}}</a> (@{{tweet.user.name}}) 
+          <a href="https://twitter.com/{{tweet.user.screen_name}}/statuses/{{tweet.id_str}}">{{tweet.user.created_at | date:'short'}}</a>
+        </div>
+      </div>
+    </div>
+  </span>
+  <span *ngIf="tagError">
+    <span>Please type a valid search term.</span>
+  </span>
+</div>

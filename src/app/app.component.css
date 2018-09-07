@@ -1,0 +1,42 @@
+.search-field span {
+	margin: 5px;
+}
+
+.search {
+	margin: 5px;
+}
+
+.twitter-tweet {
+	border: 1px solid skyblue;
+}
+
+.twitter-tweet {
+	margin-top:3px;
+}
+
+.twitter-tweet > div {
+	margin: 3px;
+}
+
+.profile {
+	display: flex;
+}
+
+.profile img {
+	height: 48px;
+	width: 48px;
+	display: block;
+}
+
+.description {
+	margin-left: 5px;
+	display: block;
+}
+
+div.tweets {
+	margin: 5px;
+}
+
+span.description * {
+    margin: 0px;
+}
