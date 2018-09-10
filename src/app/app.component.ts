@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class AppComponent {
-  title:string = 'angular-frontend';
+  title:string = 'Twitter Search';
   handle:string = '';
   userTweets:string = '';
   tagFound:boolean = false;
