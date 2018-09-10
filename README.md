@@ -1,5 +1,7 @@
 # AngularFrontend
 
+To use, download the files. Then run the command 'npm install'. After all files are downloaded, run 'ng serve --open'.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 
 ## Development server
@@ -25,8 +27,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# angular_fe
-# twitter_interface_front_end
-# twitter_interface_front_end
-# twitter_int_front_end
-# twitter_interface_front_end
